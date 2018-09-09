@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "RaterFox",
+    "description": "",
+    "version":"1",
+    "author": "Kim",
+    "browser_action": {
+        "default_title": "Test",
+        "default_popup": "popup.html"
+    },
+    "chrome_url_overrides": {
+        "newtab": "dashboard.html"
+    },
+    "permissions": ["activeTab","geolocation"]
+}

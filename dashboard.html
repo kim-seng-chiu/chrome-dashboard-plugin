@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Activity feed from: https://bootsnipp.com/snippets/7QXrr-->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="custom.css">
+
+    <title>The Dashboard</title>
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+        <h1>My Dashboard</h1>
+        <p>A HTML sandbox in a Chrome plugin.</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h3 class="info" style="text-align:center">Weather</h3>
+                <div class="text-center"><button type="button" class="btn" id="getWeatherBtn">Update Weather</button></div>
+                <!--Grid-->
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th class="lead"><h2><small>Current conditions</small></h2></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="lead">Temperature:</td>
+                            <td class="lead" id="currentTemp"></td>
+                            <td class="lead">&deg;C</td>
+                        </tr>
+                        <tr>
+                                <td class="lead">Humidity:</td>
+                                <td class="lead" id="humidity"></td>
+                                <td class="lead">%</td>
+                        </tr>
+                        <tr>
+                                <td class="lead">Wind speed:</td>
+                                <td class="lead" id="windSpeed"></td>
+                                <td class="lead">m/s</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="info" style="text-align:center">News</h3>
+                <div class="text-center"><button type="button" class="btn" id="getNewsBtn">Update News</button></div>
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th class="lead"><h2><small>Top headlines</small></h2></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="newsFeed" class="json-wrapper" style="max-height: 300px;"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="small" style="text-align: center">Powered by NewsAPI.org</p>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="info" style="text-align:center">Google Stock Price</h3>
+                <div class="text-center"><button type="button" class="btn" id="getGOOGPriceBtn">Get Current Price</button></div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-lg-12">
+                    <h3 class="bg-info" style="text-align:center">ASX Market</h3>
+            </div>
+        </div> -->
+    </div>
+    <!--Modal-->
+    <div id="notifyModal" class="modal fade" role="dialog">
+        <div id="modalContent" class="modal-content">
+            <div class="modal-header"></div>
+            <div class="modal-body">Done.</div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="functions.js"></script>
+  </body>
+</html>
