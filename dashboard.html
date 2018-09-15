@@ -10,6 +10,8 @@
 
     <!-- Activity feed from: https://bootsnipp.com/snippets/7QXrr-->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     
@@ -22,6 +24,14 @@
     <div class="jumbotron text-center">
         <h1>My Dashboard</h1>
         <p>A HTML sandbox in a Chrome plugin.</p>
+    </div>
+    <div class="container" style="text-align:center">
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        <a href="https://linkedin.com" class="fa fa-linkedin"></a>
+        <a href="https://reddit.com" class="fa fa-reddit"></a>
+        <a href="https://www.youtube.com" class="fa fa-youtube"></a>
+        <a href="https://github.com/kim-seng-chiu" class="fa fa-github"></a>
+        <a href="https://keep.google.com" class="fa fa-lightbulb-o"></a>
     </div>
     <div class="container">
         <div class="row">
@@ -74,8 +84,11 @@
                 <p class="small" style="text-align: center">Powered by NewsAPI.org</p>
             </div>
             <div class="col-lg-4">
-                <h3 class="info" style="text-align:center">Google Stock Price</h3>
-                <div class="text-center"><button type="button" class="btn" id="getGOOGPriceBtn">Get Current Price</button></div>
+                <h3 class="info" style="text-align:center">Twitter</h3>
+                <div class="text-center"><button type="button" class="btn" id="getTweets">Get Tweets</button></div>
+                <input type="text" class="form-control" placeholder="#auspol" id="hashtagSearch">
+                <!-- <h3 class="info" style="text-align:center">Google Stock Price</h3> -->
+                
             </div>
         </div>
         <!-- <div class="row">

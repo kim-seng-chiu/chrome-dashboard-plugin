@@ -117,11 +117,27 @@ function newsFeed() {
 
 function stockPrice(){
     // use CORS
-    HttpClient('https://financialmodelingprep.com/api/company/price/GOOG', function(response){
-        let res = JSON.parse(response);
-        console.log("done");
-    })
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if(xhttp.readyState == 4 && xhttp.status == 200){
+            let res = JSON.parse(xhttp.responseText);
+        }
+    }
+    
+    xhttp.open('GET','https://financialmodelingprep.com/api/company/price/GOOG',true);
+    xhttp.setRequestHeader('Access-Control-Allow-Origin','chrome-extension://ehenemajbnhjepfkifcjkomgcblegilo');
+    xhttp.setRequestHeader('Access-Control-Allow-Methods','GET, POST, PATCH, PUT, DELETE, OPTIONS');
+    xhttp.setRequestHeader('Access-Control-Allow-Headers','Origin,X-Requested-With, Content-Type,Accept, Authorization, X-Custom-Header');
+    xhttp.setRequestHeader('Access-Control-Allow-Credentials','true');
+    xhttp.send(null);
 }
 
 //window.onload = showWeather;
 //window.onload = newsFeed;
+window.onLoad = function serviceWorker(){
+    if('serviceWorker' in navigator){
+        navigator.serviceWorker
+                  .register('service-worker.js')
+                  .then(function() { console.log('Service Worker Registered')});
+    }
+}

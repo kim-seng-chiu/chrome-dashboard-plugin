@@ -7,3 +7,57 @@
     padding:10px; 
     position:relative;
 }
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none !important;
+    position: relative;
+    border-radius: 25%;
+}
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+    color: lightblue;
+}
+
+/* Set a specific color for each brand */
+
+/* Twitter */
+.fa-twitter {
+    /* background: #55ACEE;
+    color: white; */
+    border: 2px solid;
+    color: #55ACEE;
+    text-decoration: none;
+}
+
+.fa-linkedin{
+    border: 2px solid;
+    color: #0077B5;
+}
+
+.fa-reddit{
+    border: 2px solid;
+    color: #FF5700;
+}
+
+.fa-youtube{
+    border: 2px solid;
+    color: #ff0000;
+}
+
+.fa-github{
+    border: 2px solid;
+    color: #383535;
+}
+
+.fa-lightbulb-o{
+    border: 2px solid;
+    color: #FFBB00;
+}
+
+.hashtagSearch{
+    padding-top:50px;
+}
